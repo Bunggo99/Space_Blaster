@@ -14,7 +14,7 @@ class Background: SKSpriteNode {
     func parallaxScroll(deltaTime: Double){
         position.y -= (scrollSpeed * deltaTime)
         
-        if position.y <= -size.height * 2 {
+        if position.y <= -size.height * 3 {
             position.y = 0
         }
     }

@@ -29,6 +29,11 @@ class Enemy: SKSpriteNode {
         physicsBody?.collisionBitMask = 0
     }
     
+    convenience init() {
+        let texture = SKTexture(imageNamed: "Asteroid")
+        self.init(texture: texture, color: .white, size: texture.size())
+    }
+    
     convenience init(imageNamed name: String) {
         let texture = SKTexture(imageNamed: name)
         self.init(texture: texture, color: .white, size: texture.size())

@@ -50,7 +50,8 @@ class GameScene: SKScene {
     var enemySpeedIncrement = 5.0
     
     let enemyTravelDuration: TimeInterval = 10
-    var enemyNamesList = ["asteroid", "asteroid2", "asteroid3"]
+    var enemyNamesList = ["Asteroid", "FastAsteroid", "MetalAsteroidB"]
+    var spawnableEnemies: [Enemy] = [Enemy()]
     
     ///start function, once called once
     override func didMove(to view: SKView) {
@@ -87,7 +88,7 @@ class GameScene: SKScene {
         let sequenceAction = SKAction.sequence([fadeInAction, waitDuration, fadeOutAction])
         headerText.run(sequenceAction, completion: {
             self.background.scrollSpeed /= 64.0
-            self.startSpawningEnemy()
+            self.spawnEnemy()
         })
     }
     

@@ -18,7 +18,7 @@ class GameViewController: UIViewController {
         
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "MainMenu") {
+            if let scene = SKScene(fileNamed: "GameScene") {
                 // Set the scale mode to scale to fit the window
                 scene.scaleMode = .aspectFill
                 
@@ -36,21 +36,21 @@ class GameViewController: UIViewController {
     }
     
     static func changeScene(to sceneName: String) {
-        let transition = SKTransition.fade(withDuration: 0.25)
-        let scene = SKScene(fileNamed: sceneName)!
-        scene.size = currentView.scene!.size
-        
-        if let gameOverScene = scene as? GameOverScene,
-           let gameScene = currentView.scene as? GameScene {
-            gameOverScene.score = gameScene.score
-            
-            if let highScore = UserDefaults.standard.integer(forKey: "highScore") as Int?,
-               gameScene.score > highScore {
-                UserDefaults.standard.set(gameScene.score, forKey: "highScore")
-            }
-        }
-        
-        currentView.presentScene(scene, transition: transition)
+//        let transition = SKTransition.fade(withDuration: 0.25)
+//        let scene = SKScene(fileNamed: sceneName)!
+//        scene.size = currentView.scene!.size
+//
+//        if let gameOverScene = scene as? GameOverScene,
+//           let gameScene = currentView.scene as? GameScene {
+//            gameOverScene.score = gameScene.score
+//
+//            if let highScore = UserDefaults.standard.integer(forKey: "highScore") as Int?,
+//               gameScene.score > highScore {
+//                UserDefaults.standard.set(gameScene.score, forKey: "highScore")
+//            }
+//        }
+//
+//        currentView.presentScene(scene, transition: transition)
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {

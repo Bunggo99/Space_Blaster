@@ -14,16 +14,15 @@ class MainMenu: SKScene {
     var background: Background!
     
     override func didMove(to view: SKView) {
-        starField = self.scene?.childNode(withName: "Starfield") as? SKEmitterNode
+        starField = childNode(withName: "Starfield") as? SKEmitterNode
+        highScoreText = childNode(withName: "HighScoreText") as? SKLabelNode
+        playBtn = childNode(withName: "PlayBtn") as? SKSpriteNode
+        background = childNode(withName: "Background") as? Background
+        
         starField.advanceSimulationTime(20)
-                
-        highScoreText = self.scene?.childNode(withName: "HighScoreText") as? SKLabelNode
         if let highScore = UserDefaults.standard.integer(forKey: "highScore") as Int? {
             highScoreText.text = "High Score: \(highScore)"
         }
-        
-        playBtn = self.scene?.childNode(withName: "PlayBtn") as? SKSpriteNode
-        background = childNode(withName: "Background") as? Background
         
         SoundManager.shared.playSfx(scene: self, name: "explodeSfx", volume: 0, destroyAfter: 2)
     }

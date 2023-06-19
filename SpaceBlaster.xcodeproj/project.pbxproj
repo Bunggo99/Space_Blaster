@@ -26,9 +26,10 @@
 		BF7C912F2A1A40910099651F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BF7C912E2A1A40910099651F /* GameScene.sks */; };
 		BFD31E972A1A5944007BDCF8 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD31E962A1A5944007BDCF8 /* Player.swift */; };
 		BFD31E992A1B9DA8007BDCF8 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD31E982A1B9DA8007BDCF8 /* Background.swift */; };
-		BFD31E9B2A1C7D55007BDCF8 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD31E9A2A1C7D55007BDCF8 /* Enemy.swift */; };
+		BFD31E9B2A1C7D55007BDCF8 /* Enemy2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD31E9A2A1C7D55007BDCF8 /* Enemy2.swift */; };
 		BFD31E9E2A1FF565007BDCF8 /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = BFD31E9D2A1FF565007BDCF8 /* MainMenu.sks */; };
 		BFD31EA02A1FF842007BDCF8 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD31E9F2A1FF842007BDCF8 /* MainMenu.swift */; };
+		BFD31EA22A25AC9F007BDCF8 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD31EA12A25AC9F007BDCF8 /* Enemy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,9 +53,10 @@
 		BF7C912E2A1A40910099651F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		BFD31E962A1A5944007BDCF8 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		BFD31E982A1B9DA8007BDCF8 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
-		BFD31E9A2A1C7D55007BDCF8 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		BFD31E9A2A1C7D55007BDCF8 /* Enemy2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy2.swift; sourceTree = "<group>"; };
 		BFD31E9D2A1FF565007BDCF8 /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
 		BFD31E9F2A1FF842007BDCF8 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		BFD31EA12A25AC9F007BDCF8 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +95,6 @@
 				BF7C91122A196E7F0099651F /* GameScene */,
 				BF7C911F2A19C80C0099651F /* GameOverScene */,
 				BF7C91252A19CBF20099651F /* Managers */,
-				BF7C90FB2A18A9120099651F /* Main.storyboard */,
 				BF7C91132A196E8E0099651F /* Sounds */,
 				BF7C91142A196EA20099651F /* Particles */,
 				BF7C90FE2A18A9130099651F /* Assets.xcassets */,
@@ -110,7 +111,8 @@
 				BF7C91282A19CDD80099651F /* EnemySpawner.swift */,
 				BF7C912A2A19CE1C0099651F /* ShootBullet.swift */,
 				BFD31E962A1A5944007BDCF8 /* Player.swift */,
-				BFD31E9A2A1C7D55007BDCF8 /* Enemy.swift */,
+				BFD31E9A2A1C7D55007BDCF8 /* Enemy2.swift */,
+				BFD31EA12A25AC9F007BDCF8 /* Enemy.swift */,
 				BFD31E982A1B9DA8007BDCF8 /* Background.swift */,
 			);
 			path = GameScene;
@@ -146,6 +148,7 @@
 		BF7C91202A19C8490099651F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BF7C90FB2A18A9120099651F /* Main.storyboard */,
 				BF7C90F92A18A9120099651F /* GameViewController.swift */,
 			);
 			path = ViewControllers;
@@ -257,6 +260,7 @@
 			files = (
 				BFD31E992A1B9DA8007BDCF8 /* Background.swift in Sources */,
 				BF7C91292A19CDD80099651F /* EnemySpawner.swift in Sources */,
+				BFD31EA22A25AC9F007BDCF8 /* Enemy.swift in Sources */,
 				BF7C91242A19CB880099651F /* SoundManager.swift in Sources */,
 				BF7C90F82A18A9120099651F /* GameScene.swift in Sources */,
 				BF7C91272A19CD380099651F /* ContactDetection.swift in Sources */,
@@ -264,7 +268,7 @@
 				BFD31E972A1A5944007BDCF8 /* Player.swift in Sources */,
 				BFD31EA02A1FF842007BDCF8 /* MainMenu.swift in Sources */,
 				BF7C911E2A1990EF0099651F /* GameOverScene.swift in Sources */,
-				BFD31E9B2A1C7D55007BDCF8 /* Enemy.swift in Sources */,
+				BFD31E9B2A1C7D55007BDCF8 /* Enemy2.swift in Sources */,
 				BF7C90F22A18A9120099651F /* AppDelegate.swift in Sources */,
 				BF7C912B2A19CE1C0099651F /* ShootBullet.swift in Sources */,
 			);
